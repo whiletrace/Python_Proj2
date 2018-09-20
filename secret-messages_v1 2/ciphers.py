@@ -8,7 +8,7 @@ class Cipher(object) :
         methods encyrpt and decrypt will raise implementation errors if not 
         implemented by child cipher classes
         '''
-        
+
     def encrypt(self):
         raise NotImplementedError()
 
@@ -27,8 +27,8 @@ class Cipher(object) :
     def inttochar(self, i):
 
         i = i%26
-        conversiondict = {'A','B','C','D','E','F','G','H','I','J','K','L','M',
-                          'N','O','P','Q','U','R','S','T','U','V','W','X', 'Y',
-                          'Z'}
+        conversiondict = ('A','B','C','D','E','F','G','H','I','J','K','L','M',
+                          'N','O','P','Q','R','S','T','U','V','W','X', 'Y',
+                          'Z')
         return conversiondict[i]
 
