@@ -21,3 +21,8 @@ class Affine(Cipher):
         cypher = [self.inttochar(i) for i in mod]
 
         print(''.join(cypher))
+
+    def decrypt(self, text, key_a, keyb):
+        text = text.replace(' ', '')
+        y = [self.chartoint(char) for char in text]
+        
