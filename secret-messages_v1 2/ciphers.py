@@ -27,8 +27,8 @@ class Cipher(object) :
     def inttochar(self, i):
 
         i = i%26
-        conversiondict = ('A','B','C','D','E','F','G','H','I','J','K','L','M',
+        conversiontuple = ('A','B','C','D','E','F','G','H','I','J','K','L','M',
                           'N','O','P','Q','R','S','T','U','V','W','X', 'Y',
                           'Z')
-        return conversiondict[i]
+        return conversiontuple[i]
 
