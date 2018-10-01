@@ -14,13 +14,13 @@ class Affine(Cipher):
         # convert user text to corresponding integers
         x = [self.chartoint(char) for char in text]
         # implement ((key_a)x + keyb)
-        step2= [(key_a * i) + key_b for i in x]
+        step2 = [(key_a * i) + key_b for i in x]
         # to complete cyper take result of step 2 and use modelo of the char length of alphabet
         mod = [i % self.mod for i in step2]
         # now to convert int from mod to char to complete the cipher
-        cypher = [self.inttochar(i) for i in mod]
+        cipher = [self.inttochar(i) for i in mod]
 
-        print(''.join(cypher))
+        print(''.join(cipher))
 
     def decrypt(self, text, key_a, key_b):
         text = text.replace(' ', '')

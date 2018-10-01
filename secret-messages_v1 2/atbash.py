@@ -21,7 +21,7 @@ class Atbash(Cipher):
         x = [self.chartoint(char) for char in text]
         cipher =[self.key[i] for i in x]
         print(''.join(cipher))
-        print(self.keytoint)
+       
         
     def decrypt(self, text):
         x = [self.keytoint(char) for char in text]
