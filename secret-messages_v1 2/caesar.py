@@ -21,7 +21,7 @@ class Caesar(Cipher):
                 output.append(char)
             else:
                 output.append(self.FORWARD[index+self.offset])
-        return ''.join(output)
+        print('here is your encrypted text: {}'.format(''.join(output)))
 
     def decrypt(self, text):
         output = []
@@ -33,7 +33,7 @@ class Caesar(Cipher):
                 output.append(char)
             else:
                 output.append(self.BACKWARD[index-self.offset])
-        return ''.join(output)
+        print('here is your decrypted text: {}'.format(''.join(output)))
 
 
 

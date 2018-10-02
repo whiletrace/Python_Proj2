@@ -35,18 +35,18 @@ def main():
         raise Exception('not a valid choice')
     # Caesar cipher encrypt
     elif cipher.lower() == 'caesar' and eord.lower() == 'encrypt':
-        message = input('please type a message')
+        message = input('please type a message to encrypt: ')
         A = Caesar()
-        print(A.encrypt(message))
+        A.encrypt(message)
     # Caesar cipher decrypt
     elif cipher.lower() == 'caesar' and eord.lower() == 'decrypt':
-        message = input('please type a message')
+        message = input('please input message to decrypt: ')
         A = Caesar()
-        print(A.decrypt(message))
+        A.decrypt(message)
     # Affine cipher encrypt
     elif cipher.lower() == 'affine' and eord.lower() == 'encrypt':
         key_a = input('for key_a acceptable choices are,'
-                      '1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25')
+                      '1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25: ')
 
         if int(key_a) not in (1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25):
             raise Exception('this key would not work')
@@ -55,13 +55,13 @@ def main():
             if int(key_b) not in (range(25)):
                 raise Exception('This is not a valid choice')
 
-        message = input('please type a message to encrypt ')
+        message = input('please type a message to encrypt: ')
         A = Affine()
         A.encrypt(message, int(key_a), int(key_b))
     # Affine cipher decrypt
     elif cipher.lower() == 'affine' and eord.lower() == 'decrypt':
         key_a = input('for key_a acceptable choices are'
-                      '1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25')
+                      '1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25: ')
 
         if int(key_a) not in (1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25):
             raise Exception('this key would not work')
@@ -70,7 +70,7 @@ def main():
             if int(key_b) not in (range(25)):
                 raise Exception('This is not a valid choice')
 
-        message = input('please type a message to encrypt')
+        message = input('please type a message: ')
         A = Affine()
         A.decrypt(message, int(key_a), int(key_b))
     # Attbash cipher encrypt
@@ -85,7 +85,7 @@ def main():
         A.decrypt(message)
     # Keyword cipher encrypt
     elif cipher.lower() == 'keyword' and eord.lower() == 'encrypt':
-        key = input('please type a keyword for encryption')
+        key = input('please type a keyword for encryption: ')
         message = input('please type a message: ')
         A = Keyw()
         A.encrypt(message, key)
